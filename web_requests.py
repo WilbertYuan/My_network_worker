@@ -8,11 +8,8 @@ pyautogui.PAUSE = waittime
 import os
 import time
 
-# 定义一个函数，用来ping百度，并打印结果
 def ping_baidu():
-    # 使用os.system()方法执行ping命令，并将结果保存到result变量中
     result = os.system('ping www.baidu.com')
-    # 判断result是否为0，如果为0，表示ping成功，否则表示ping失败
     if result == 0:
           print("success")
     else:
@@ -78,11 +75,9 @@ def ping_baidu():
                pyautogui.click(1009,355)
 
 
-# 定义一个无限循环，每隔一分钟执行一次ping_baidu()函数
+
 while True:
-    # 调用ping_baidu()函数
     ping_baidu()
-    # 使用time.sleep()方法暂停60秒（即一分钟）
     time.sleep(0.5) 
 
 
